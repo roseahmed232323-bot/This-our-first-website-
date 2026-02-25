@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beautiful Form</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#4facfe,#00f2fe);
+    }
+
+    .form-container{
+        width:350px;
+        padding:30px;
+        border-radius:15px;
+        background:white;
+        box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        animation:fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+
+    h2{
+        text-align:center;
+        margin-bottom:20px;
+        color:#333;
+    }
+
+    .input-group{
+        margin-bottom:18px;
+    }
+
+    label{
+        display:block;
+        margin-bottom:6px;
+        font-weight:bold;
+        color:#555;
+    }
+
+    input, select, textarea{
+        width:100%;
+        padding:10px;
+        border-radius:8px;
+        border:1px solid #ccc;
+        outline:none;
+        transition:0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus{
+        border-color:#4facfe;
+        box-shadow:0 0 5px rgba(79,172,254,0.5);
+    }
+
+    textarea{
+        resize:none;
+        height:80px;
+    }
+
+    .btn{
+        width:100%;
+        padding:12px;
+        border:none;
+        border-radius:8px;
+        background:linear-gradient(135deg,#4facfe,#00c6ff);
+        color:white;
+        font-size:16px;
+        font-weight:bold;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    .btn:hover{
+        background:linear-gradient(135deg,#00c6ff,#4facfe);
+        transform:scale(1.05);
+    }
+
+    .footer{
+        text-align:center;
+        margin-top:15px;
+        font-size:14px;
+        color:#777;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Registration Form</h2>
+
+    <form>
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+
+        <div class="input-group">
+            <label for="Email">Email</label>
+            <input id="Email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="input-group">
+            <label for="Password">Password</label>
+            <input id="Password" type="" placeholder="Enter password" required>
+        </div>
+
+        <div class="input-group">
+            <label>Gender</label>
+            <select required>
+                <option value=""Select Gender>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+        </div>
+        <div>
+            <input type="radio" name="subscriptions" required="">
+            <label for="basic">basic</label>
+          
+             <input type="radio" name="subscriptions" required="">
+            <label for="premium">premium</label>
+          <input type="radio" name="subscription">
+          <label>Vip</label>
+        </div>
+        <div>
+            <inpu id="terms"t type="checkbox"  >
+            <label for="terms"> I agree terms anf condition</label>
+        </div>
+
+        <div class="input-group">
+            <label for="Message">Message</label>
+            <textarea id="Message"placeholder="Write something..."></textarea>
+        </div>
+
+        <button class="btn">Submit</button>
+    </form>
+
+    <div class="footer">
+        Made with ❤️ using HTML & CSS
+    </div>
+</div>
+
+</body>
+</html>
